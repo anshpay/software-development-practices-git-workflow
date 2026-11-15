@@ -1,0 +1,52 @@
+Git commands used and explanations
+
+git init -b main
+  Initialize the local repository with main as the initial branch.
+git config user.name 'Anshul Patyal'
+  Set the author name for commits in this repository.
+git config user.email 'anshpay@users.noreply.github.com'
+  Set the author email for commits in this repository.
+git add index.html about.html
+  Stage the initial project files.
+git commit -m 'Create initial project pages'
+  Record the first version of both pages.
+git add index.html
+  Stage the home page changes (also used before the temporary commit).
+git commit -m 'Update home page introduction'
+  Record the second version of the home page.
+git branch feature
+  Create a branch named feature at the current commit.
+git switch feature
+  Move to the feature branch.
+git add about.html
+  Stage the feature change to the about page.
+git commit -m 'Describe the project on about page'
+  Record the change on the feature branch.
+git switch main
+  Return to the main branch.
+git merge --no-ff feature -m 'Merge feature branch'
+  Merge the feature branch and retain an explicit merge commit.
+git add .gitignore
+  Stage the ignore rules for log files and the temp directory.
+git commit -m 'Ignore logs and temporary folder'
+  Record the ignore rules.
+git commit -m 'Add temporary change for undo demonstration'
+  Record an extra change to demonstrate an undo operation.
+git revert --no-edit HEAD
+  Create a new commit reversing the last commit while preserving history.
+git log --graph --oneline --all
+  Show the commit graph, including the feature and merge history.
+git status --short
+  Display concise working-tree and staging status.
+gh repo create software-development-practices-git-workflow --public --source . --remote origin --push
+  Create the public GitHub repository, connect origin and push main.
+git add git_commands.txt
+  Stage this command documentation file.
+git commit -m 'Document Git workflow commands'
+  Commit the command documentation.
+git push origin main feature
+  Push main and the feature branch to GitHub.
+git check-ignore example.log temp/example.txt
+  Verify that the ignore rules match a log file and a file in temp.
+git remote -v
+  Show the configured fetch and push URLs.
